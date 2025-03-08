@@ -28,10 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      afterSignOutUrl={'/dashboard'}
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-    >
+    <ClerkProvider afterSignOutUrl={'/dashboard'}>
       <html lang="ja">
         <body className={`${notoSansJP.className} antialiased`}>
           {children}
