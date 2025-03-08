@@ -10,8 +10,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'GenAI App',
-  description: 'AIを使ったApplication',
+  title: 'Proof of Concept',
+  description: 'Azureを用いたPoCについての情報を提供します。',
 };
 
 export default function RootLayout({
