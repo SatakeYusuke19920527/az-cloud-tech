@@ -22,3 +22,7 @@ https://bolt.new/
 ## 認証
 
 https://clerk.com/
+
+## Azure
+
+az-cloud-tech
