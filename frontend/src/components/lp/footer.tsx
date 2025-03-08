@@ -37,7 +37,7 @@ export function Footer({ className }: FooterProps) {
           <div>
             <Link href="/" className="flex items-center space-x-2">
               <Wand2 className="h-6 w-6" />
-              <span className="font-bold">AImagine</span>
+              <span className="font-bold">Proof of Concept</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               AIの力で、あなたのクリエイティブワークを次のレベルへ。
@@ -91,7 +91,7 @@ export function Footer({ className }: FooterProps) {
         </div>
         <div className="mt-16 border-t pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 AImagine. All rights reserved.
+            © 2025 PoC部. All rights reserved.
           </p>
         </div>
       </div>

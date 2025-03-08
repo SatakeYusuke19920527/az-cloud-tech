@@ -5,23 +5,22 @@ import Image from 'next/image';
 
 const cases = [
   {
-    title: 'デザイナー',
-    description:
-      'アイデアを素早くビジュアル化し、クライアントへのプレゼンテーションを強化',
+    title: '製造業',
+    description: 'Azure IoT HubとAIを活用した予知保全システムの構築',
     image:
-      'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1780&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    title: 'マーケター',
-    description: 'SNS投稿やWeb広告用の画像を効率的に作成・最適化',
+    title: '金融業',
+    description: 'Azure OpenAIを活用した次世代チャットボットの開発',
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    title: 'EC事業者',
-    description: '商品画像の背景除去や一括編集で、統一感のある商品展示を実現',
+    title: '小売業',
+    description: 'Azure Cognitive Servicesによる商品レコメンドエンジンの実装',
     image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop',
   },
 ];
 
@@ -35,12 +34,12 @@ export function UseCasesSection() {
         className="mx-auto max-w-[980px] text-center"
       >
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          様々な業界で活用される
+          業界を問わず活用される
           <br className="hidden sm:inline" />
-          AImagineの活用事例
+          Azure PoCの実績
         </h2>
         <p className="mt-4 text-lg text-muted-foreground">
-          業界や規模を問わず、多くの企業様にご利用いただいています。
+          多様な業界で、革新的なAzureソリューションを提供しています。
         </p>
       </motion.div>
 

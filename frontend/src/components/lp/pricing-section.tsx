@@ -6,41 +6,42 @@ import { Check } from 'lucide-react';
 
 const plans = [
   {
-    name: 'フリー',
-    price: '¥0',
-    description: '個人での利用に最適',
+    name: 'スモール',
+    price: '¥2,000,000',
+    description: '小規模なPoCに最適',
     features: [
-      '月100枚までの画像生成',
-      '基本的な背景除去',
-      '標準画質での出力',
-      '基本的なサポート',
+      '2週間のPoC期間',
+      'Azure基本機能の検証',
+      '基本的な実装サポート',
+      '週次進捗報告',
+      '結果報告書の提供',
     ],
   },
   {
-    name: 'プロ',
-    price: '¥2,980',
-    description: 'プロフェッショナルな制作に',
+    name: 'スタンダード',
+    price: '¥5,000,000',
+    description: '一般的なPoCプロジェクトに',
     features: [
-      '月1000枚までの画像生成',
-      '高度な背景除去',
-      'HD画質での出力',
-      '優先サポート',
-      'バッチ処理機能',
-      'カスタムプリセット',
+      '1ヶ月のPoC期間',
+      'Azure高度な機能の検証',
+      '詳細な技術サポート',
+      '週2回の進捗報告',
+      'カスタマイズ可能な検証項目',
+      '詳細な分析レポート',
     ],
   },
   {
-    name: 'ビジネス',
-    price: '¥9,800',
-    description: 'チームでの利用に最適',
+    name: 'エンタープライズ',
+    price: '応相談',
+    description: '大規模プロジェクトに',
     features: [
-      '無制限の画像生成',
-      'プロ仕様の背景除去',
-      '4K画質での出力',
-      '24時間サポート',
-      'API利用可能',
-      'カスタマイズ可能なワークフロー',
-      'チーム管理機能',
+      '期間はプロジェクトに応じて設定',
+      'Azure全機能の検証対応',
+      '24時間技術サポート',
+      '日次進捗報告',
+      'カスタム開発対応',
+      '包括的な分析レポート',
+      '本番環境への移行支援',
     ],
   },
 ];
@@ -55,10 +56,12 @@ export function PricingSection() {
         className="mx-auto max-w-[980px] text-center"
       >
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          シンプルな料金プラン
+          プロジェクトに合わせた
+          <br className="hidden sm:inline" />
+          柔軟なプラン
         </h2>
         <p className="mt-4 text-lg text-muted-foreground">
-          必要な機能に応じて、最適なプランをお選びいただけます。
+          規模や要件に応じて、最適なPoCプランをご提案します。
         </p>
       </motion.div>
 
@@ -76,7 +79,9 @@ export function PricingSection() {
               <h3 className="text-xl font-semibold">{plan.name}</h3>
               <div className="mt-4">
                 <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-muted-foreground">/月</span>
+                {plan.price !== '応相談' && (
+                  <span className="text-muted-foreground">/プロジェクト</span>
+                )}
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
                 {plan.description}
@@ -90,9 +95,7 @@ export function PricingSection() {
                 </li>
               ))}
             </ul>
-            <Button className="mt-8">
-              {plan.name === 'フリー' ? '無料で始める' : '申し込む'}
-            </Button>
+            <Button className="mt-8">お問い合わせ</Button>
           </motion.div>
         ))}
       </div>

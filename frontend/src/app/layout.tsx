@@ -10,8 +10,16 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'Proof of Concept',
-  description: 'Azureを用いたPoCについての情報を提供します。',
+  title: 'Azure PoC - エンタープライズAI開発支援サービス',
+  description:
+    'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。製造、金融、小売など、様々な業界で実績があります。',
+  openGraph: {
+    title: 'Azure PoC - エンタープライズAI開発支援サービス',
+    description:
+      'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。製造、金融、小売など、様々な業界で実績があります。',
+    type: 'website',
+    locale: 'ja_JP',
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider afterSignOutUrl={'/dashboard'}>
+    <ClerkProvider
+      afterSignOutUrl={'/dashboard'}
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    >
       <html lang="ja">
         <body className={`${notoSansJP.className} antialiased`}>
           {children}

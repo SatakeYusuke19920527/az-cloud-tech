@@ -1,8 +1,5 @@
 'use client';
 
-import { Wand2 } from 'lucide-react';
-import Link from 'next/link';
-
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -14,7 +11,8 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, Wand2 } from 'lucide-react';
+import Link from 'next/link';
 import AuthButton from '../auth/auth-button';
 
 const features = [
@@ -43,7 +41,7 @@ export function SiteHeader() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Wand2 className="h-6 w-6" />
-              <span className="font-bold">AImagine</span>
+              <span className="font-bold">Proof of Concept</span>
             </Link>
           </div>
           <div className="flex items-center space-x-6">
@@ -116,7 +114,12 @@ export function SiteHeader() {
                     <Link href="#cases" className="text-lg font-medium">
                       活用事例
                     </Link>
-                    <AuthButton />
+                    <Link href="/login" className="text-lg font-medium">
+                      ログイン
+                    </Link>
+                    <Button asChild>
+                      <Link href="/signup">無料で始める</Link>
+                    </Button>
                   </nav>
                 </SheetContent>
               </Sheet>

@@ -14,15 +14,15 @@ export function CtaSection() {
         className="mx-auto max-w-[980px] rounded-lg bg-primary p-8 text-center text-primary-foreground md:p-12 lg:p-16"
       >
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          あなたのクリエイティブワークを、
+          あなたのプロジェクトを、
           <br className="hidden sm:inline" />
-          今すぐ次のレベルへ
+          次のステージへ
         </h2>
         <p className="mt-4 text-lg text-primary-foreground/80">
-          無料トライアルで、AImagineの可能性を体験してください。
+          Azure専門家との無料相談で、最適なソリューションをご提案します。
         </p>
         <Button size="lg" variant="secondary" className="mt-8 gap-2">
-          無料で始める
+          無料相談を予約
           <ArrowRight className="h-4 w-4" />
         </Button>
       </motion.div>

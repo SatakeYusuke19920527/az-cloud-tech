@@ -1,48 +1,42 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Compass,
-  Image as ImageIcon,
-  Layers,
-  Palette,
-  Wand2,
-  Zap,
-} from 'lucide-react';
+import { Brain, Code, Database, Gauge, Shield, Users } from 'lucide-react';
 import Image from 'next/image';
 
 const features = [
   {
-    icon: Wand2,
-    title: 'AI画像生成',
+    icon: Brain,
+    title: 'AI開発',
     description:
-      'テキストから高品質な画像を生成。アイデアを瞬時にビジュアル化します。',
+      'Azure Cognitive ServicesやOpenAIを活用した、最新のAIソリューション開発',
   },
   {
-    icon: ImageIcon,
-    title: '背景除去',
-    description: 'ワンクリックで完璧な背景除去。プロ品質の結果を数秒で実現。',
-  },
-  {
-    icon: Compass,
-    title: '画像最適化',
+    icon: Code,
+    title: 'アプリケーション開発',
     description:
-      '品質を保ちながら、ファイルサイズを最適化。ウェブに最適な画像を。',
+      'Azure PaaSを活用した、スケーラブルで高性能なアプリケーション開発',
   },
   {
-    icon: Palette,
-    title: 'スタイル変換',
-    description: '様々なアートスタイルに画像を変換。独創的な表現を可能に。',
+    icon: Gauge,
+    title: 'パフォーマンス最適化',
+    description:
+      'Azure Monitor & Insightsによる、パフォーマンスの可視化と最適化',
   },
   {
-    icon: Layers,
-    title: 'バッチ処理',
-    description: '複数の画像を一括処理。作業時間を大幅に削減。',
+    icon: Database,
+    title: 'データ基盤構築',
+    description: 'Azure Synapse Analyticsを用いた、次世代のデータ基盤構築',
   },
   {
-    icon: Zap,
-    title: 'リアルタイムプレビュー',
-    description: '変更をリアルタイムで確認。スムーズなワークフローを実現。',
+    icon: Shield,
+    title: 'セキュリティ対策',
+    description: 'Azure Security Centerによる、包括的なセキュリティ管理の実現',
+  },
+  {
+    icon: Users,
+    title: '専門家チーム',
+    description: 'Azure認定資格保有者による、確実なプロジェクト推進',
   },
 ];
 
@@ -56,9 +50,9 @@ export function FeaturesSection() {
           viewport={{ once: true }}
           className="text-3xl font-bold tracking-tight md:text-4xl"
         >
-          プロフェッショナルな画像編集を、
+          Azure専門家による、
           <br className="hidden sm:inline" />
-          より簡単に
+          確実なPoC実現
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -67,9 +61,9 @@ export function FeaturesSection() {
           transition={{ delay: 0.1 }}
           className="mt-4 text-lg text-muted-foreground"
         >
-          最新のAI技術を活用し、プロフェッショナルな画像編集を
+          最新のAzureテクノロジーと豊富な実績を持つ専門家チームが、
           <br className="hidden sm:inline" />
-          誰でも簡単に実現できます。
+          あなたのプロジェクトを成功へと導きます。
         </motion.p>
       </div>
 
@@ -95,8 +89,8 @@ export function FeaturesSection() {
       <div className="mx-auto mt-24 max-w-5xl">
         <div className="relative aspect-video overflow-hidden rounded-lg">
           <Image
-            src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=2074&auto=format&fit=crop"
-            alt="AI Image Processing Demo"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
+            alt="Azure Development Team"
             width={1920}
             height={1080}
             className="object-cover"
