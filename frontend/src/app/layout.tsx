@@ -10,13 +10,13 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'Azure PoC - エンタープライズAI開発支援サービス',
+  title: 'AzPoC - Azureの技術検証とAIアプリケーション開発支援',
   description:
-    'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。製造、金融、小売など、様々な業界で実績があります。',
+    'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。',
   openGraph: {
-    title: 'Azure PoC - エンタープライズAI開発支援サービス',
+    title: 'AzPoC - Azureの技術検証とAIアプリケーション開発支援',
     description:
-      'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。製造、金融、小売など、様々な業界で実績があります。',
+      'Azure専門家チームによる、確実なPoC実現とAIアプリケーション開発支援サービス。',
     type: 'website',
     locale: 'ja_JP',
   },

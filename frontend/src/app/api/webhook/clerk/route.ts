@@ -1,3 +1,4 @@
+import { createUser } from '@/lib/cosmos/user';
 import { WebhookEvent } from '@clerk/nextjs/server';
 import { headers } from 'next/headers';
 import { Webhook } from 'svix';
@@ -55,8 +56,15 @@ export async function POST(req: Request) {
     console.log(
       `Received webhook with ID ${id} and event type of ${eventType}`
     );
-    console.log('Webhook payload:', body);
+    const result = await createUser(
+      evt.data.id,
+      evt.data.email_addresses[0].email_address
+    );
+    console.log('🚀 ~ POST ~ result:', result);
+    return new Response('user registered', { status: 200 });
   }
 
   return new Response('Webhook received', { status: 200 });
 }
+
+// https://az-cloud-tech.vercel.app/api/webhook/clerk
