@@ -1,4 +1,4 @@
-import { createUser } from '@/lib/cosmos/user';
+import { createUser, deleteUser, updateUser } from '@/lib/cosmos/user';
 import { WebhookEvent } from '@clerk/nextjs/server';
 import { headers } from 'next/headers';
 import { Webhook } from 'svix';
@@ -52,19 +52,26 @@ export async function POST(req: Request) {
   // For this guide, log payload to console
   const { id } = evt.data;
   const eventType = evt.type;
+  console.log(`Received webhook with ID ${id} and event type of ${eventType}`);
   if (evt.type === 'user.created') {
-    console.log(
-      `Received webhook with ID ${id} and event type of ${eventType}`
-    );
     const result = await createUser(
       evt.data.id,
       evt.data.email_addresses[0].email_address
     );
     console.log('🚀 ~ POST ~ result:', result);
     return new Response('user registered', { status: 200 });
+  } else if (evt.type === 'user.updated') {
+    const result = await updateUser(
+      evt.data.id,
+      evt.data.email_addresses[0].email_address
+    );
+    console.log('🚀 ~ POST ~ result:', result);
+    return new Response('user updated', { status: 200 });
+  } else if (evt.type === 'user.deleted') {
+    const result = await deleteUser(evt.data.id!);
+    console.log('🚀 ~ POST ~ result:', result);
+    return new Response('user registered', { status: 200 });
+  } else {
+    return new Response('Webhook received', { status: 200 });
   }
-
-  return new Response('Webhook received', { status: 200 });
 }
-
-// https://az-cloud-tech.vercel.app/api/webhook/clerk
