@@ -10,6 +10,12 @@ interface ArticleListProps {
 }
 
 export function ArticleList({ articles }: ArticleListProps) {
+  // 記事を日付でソート（最新順）
+  const sortedArticles = [...articles].sort(
+    (a, b) =>
+      new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+  );
+
   return (
     <Card>
       <CardHeader>
@@ -17,7 +23,7 @@ export function ArticleList({ articles }: ArticleListProps) {
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
-          {articles.map((article, index) => (
+          {sortedArticles.map((article, index) => (
             <div
               key={index}
               className="p-4 border rounded-lg hover:bg-accent transition-colors"

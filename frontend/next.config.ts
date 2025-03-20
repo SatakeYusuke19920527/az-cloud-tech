@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['images.unsplash.com', 'res.cloudinary.com'],
+    domains: [
+      'images.unsplash.com',
+      'res.cloudinary.com',
+      'lh3.googleusercontent.com',
+    ],
     remotePatterns: [
       {
         protocol: 'https',

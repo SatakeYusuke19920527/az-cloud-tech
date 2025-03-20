@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -25,11 +26,10 @@ export function HeroSection() {
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button size="lg" className="gap-2">
-            無料相談を予約
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button size="lg" variant="outline">
-            事例を見る
+            <Link href="/dashboard">
+              Dashboardへ移動
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </motion.div>
