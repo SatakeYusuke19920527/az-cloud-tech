@@ -16,13 +16,10 @@ export function HeroSection() {
         className="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center"
       >
         <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]">
-          Azureで実現する<span className="text-primary">次世代</span>の
-          <br className="hidden sm:inline" />
-          アプリケーション開発
+          PoC部
         </h1>
         <p className="max-w-[750px] text-lg text-muted-foreground sm:text-xl">
-          Azure専門家チームが、あなたのビジネスに最適なAIソリューションを提案。
-          確実なPoCで、プロジェクトの成功をサポートします。
+          Proof of Concept Department
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Link href="/dashboard" className="cursor-pointer">
