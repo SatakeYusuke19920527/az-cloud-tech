@@ -1,3 +1,4 @@
+'use client';
 import AuthButton from '@/components/auth/auth-button';
 import MobileNav from '@/components/dashboard/mobile-nav';
 import DashboardNav from '@/components/dashboard/nav';
@@ -8,6 +9,13 @@ export default function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const { isSignedIn } = useUser();
+  // console.log('🚀 ~ Dashboard ~ isSignedIn:', isSignedIn);
+  // useEffect(() => {
+  //   if (!isSignedIn) {
+  //     window.location.href = '/';
+  //   }
+  // }, [isSignedIn]);
   return (
     <div>
       {/* header */}

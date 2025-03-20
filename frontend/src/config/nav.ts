@@ -9,23 +9,23 @@ import {
 
 export const navItems: NavItem[] = [
   {
-    title: 'Dashboard',
+    title: '今月のPoC',
     href: '/dashboard',
     icon: LayoutDashboard,
   },
   {
-    title: '画像生成',
-    href: '/dashboard/tools/image-generator',
+    title: 'ゼニの話',
+    href: '/dashboard/money',
     icon: Image,
   },
   {
-    title: '背景削除',
-    href: '/dashboard/tools/remove-bg',
+    title: 'Load to MVP',
+    href: '/dashboard/mvp',
     icon: Layers,
   },
   {
-    title: '画像圧縮',
-    href: '/dashboard/tools/optimize',
+    title: 'News',
+    href: '/dashboard/news',
     icon: ImageDown,
   },
   {
