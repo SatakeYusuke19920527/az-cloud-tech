@@ -2,20 +2,22 @@
 import AuthButton from '@/components/auth/auth-button';
 import MobileNav from '@/components/dashboard/mobile-nav';
 import DashboardNav from '@/components/dashboard/nav';
+import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const { isSignedIn } = useUser();
-  // console.log('🚀 ~ Dashboard ~ isSignedIn:', isSignedIn);
-  // useEffect(() => {
-  //   if (!isSignedIn) {
-  //     window.location.href = '/';
-  //   }
-  // }, [isSignedIn]);
+  const { isSignedIn } = useUser();
+  console.log('🚀 ~ Dashboard ~ isSignedIn:', isSignedIn);
+  useEffect(() => {
+    if (!isSignedIn) {
+      window.location.href = '/';
+    }
+  }, [isSignedIn]);
   return (
     <div>
       {/* header */}

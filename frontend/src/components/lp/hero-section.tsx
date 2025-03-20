@@ -25,12 +25,12 @@ export function HeroSection() {
           確実なPoCで、プロジェクトの成功をサポートします。
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button size="lg" className="gap-2">
-            <Link href="/dashboard">
-              Dashboardへ移動
+          <Link href="/dashboard" className="cursor-pointer">
+            <Button size="lg" className="gap-2">
+              <div>Dashboardへ移動</div>
               <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </motion.div>
 
