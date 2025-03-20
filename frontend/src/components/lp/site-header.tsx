@@ -11,6 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { SignInButton, SignUpButton } from '@clerk/nextjs';
 import { Menu, Wand2 } from 'lucide-react';
 import Link from 'next/link';
 import AuthButton from '../auth/auth-button';
@@ -114,12 +115,26 @@ export function SiteHeader() {
                     <Link href="#cases" className="text-lg font-medium">
                       活用事例
                     </Link>
-                    <Link href="/login" className="text-lg font-medium">
+                    <SignInButton
+                      mode="modal"
+                      fallbackRedirectUrl={'/dashboard'}
+                      forceRedirectUrl={'/dashboard'}
+                    >
+                      <Button variant={'ghost'}>ログイン</Button>
+                    </SignInButton>
+                    <SignUpButton
+                      mode="modal"
+                      fallbackRedirectUrl={'/dashboard'}
+                      forceRedirectUrl={'/dashboard'}
+                    >
+                      <Button variant={'default'}>新規登録</Button>
+                    </SignUpButton>
+                    {/* <Link href="/login" className="text-lg font-medium">
                       ログイン
                     </Link>
                     <Button asChild>
                       <Link href="/signup">無料で始める</Link>
-                    </Button>
+                    </Button> */}
                   </nav>
                 </SheetContent>
               </Sheet>
