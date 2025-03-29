@@ -49,10 +49,27 @@ export function UserChart({ data, type, timeRange }: UserChartProps) {
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent className="h-[300px]">
+      <CardContent className="h-[400px]">
+        {' '}
+        {/* Increased height for better visibility */}
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData}>
-            <XAxis dataKey="name" />
+          <BarChart
+            data={chartData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 60, // Increased bottom margin for labels
+            }}
+          >
+            <XAxis
+              dataKey="name"
+              interval={0} // Force display all labels
+              angle={-45} // Rotate labels
+              textAnchor="end" // Align rotated text
+              height={60} // Increase height for rotated labels
+              tick={{ fontSize: 12 }} // Adjust font size if needed
+            />
             <YAxis />
             <Tooltip />
             <Legend />

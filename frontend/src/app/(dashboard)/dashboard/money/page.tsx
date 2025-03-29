@@ -8,8 +8,6 @@ export default async function MoneyPage() {
   const filePath = path.join(process.cwd(), 'src/content', 'money.md');
   const content = await fs.readFile(filePath, 'utf8');
   const user = await currentUser();
-  console.log('🚀 ~ MoneyPage ~ user:', user?.emailAddresses[0].emailAddress);
-
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">

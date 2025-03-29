@@ -2,9 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import ReactMarkdown from 'react-markdown';
-// Prism 版のコンポーネント
-
-// Prism 用のスタイル
 
 import remarkGfm from 'remark-gfm';
 
@@ -101,17 +98,18 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           const match = /language-(\w+)/.exec(className || '');
           /* */
           return match ? (
-            <div></div>
+            <pre
+              className={`language-`}
+              style={{
+                background: '#f5f5f5',
+                padding: '1em',
+                borderRadius: '5px',
+                overflowX: 'auto',
+              }}
+            >
+              <code>{String(children).replace(/\n$/, '')}</code>
+            </pre>
           ) : (
-            // <SyntaxHighlighter
-            //   style={materialDark}
-            //   language={match[1]}
-            //   PreTag="div"
-            //   className="rounded-md"
-            //   {...props}
-            // >
-            //   {String(children).replace(/\n$/, '')}
-            // </SyntaxHighlighter>
             <code
               className={cn(
                 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm',
