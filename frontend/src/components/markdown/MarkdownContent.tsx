@@ -2,8 +2,9 @@
 
 import { cn } from '@/lib/utils';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+// Prism 版のコンポーネント
+
+// Prism 用のスタイル
 
 import remarkGfm from 'remark-gfm';
 
@@ -99,17 +100,19 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
         code: ({ node, className, children, ...props }) => {
           console.log('🚀 ~ MarkdownContent ~ node:', node);
           const match = /language-(\w+)/.exec(className || '');
+          /* */
           return match ? (
-            <SyntaxHighlighter
-              style={materialDark}
-              language={match[1]}
-              PreTag="div"
-              className="rounded-md"
-              {...props}
-            >
-              {String(children).replace(/\n$/, '')}
-            </SyntaxHighlighter>
+            <div></div>
           ) : (
+            // <SyntaxHighlighter
+            //   style={materialDark}
+            //   language={match[1]}
+            //   PreTag="div"
+            //   className="rounded-md"
+            //   {...props}
+            // >
+            //   {String(children).replace(/\n$/, '')}
+            // </SyntaxHighlighter>
             <code
               className={cn(
                 'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm',
