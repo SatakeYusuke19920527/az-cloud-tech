@@ -26,7 +26,7 @@ const cases = [
 
 export function UseCasesSection() {
   return (
-    <section className="container py-16 md:py-24">
+    <section className="mx-auto container py-16 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

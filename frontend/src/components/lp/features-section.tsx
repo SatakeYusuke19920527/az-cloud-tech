@@ -42,7 +42,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="container py-16 md:py-24">
+    <section className="mx-auto container py-16 md:py-24">
       <div className="mx-auto max-w-[980px] text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

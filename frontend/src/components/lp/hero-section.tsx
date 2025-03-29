@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section className="container relative pt-20 pb-8 md:pt-24 md:pb-12 lg:pt-32 lg:pb-16">
+    <section className="mx-auto container relative pt-20 pb-8 md:pt-24 md:pb-12 lg:pt-32 lg:pb-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
