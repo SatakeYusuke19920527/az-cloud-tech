@@ -70,7 +70,11 @@ export default function Dashboard() {
   if (loading) {
     return (
       <div className="min-h-screen bg-background p-8 flex items-center justify-center">
-        <div className="text-xl">Loading...</div>
+        <div className="text-xl">
+          <div className="flex justify-center" aria-label="読み込み中">
+            <div className="animate-spin h-8 w-8 bg-blue-300 rounded-xl"></div>
+          </div>
+        </div>
       </div>
     );
   }
