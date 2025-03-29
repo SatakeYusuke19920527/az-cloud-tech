@@ -97,8 +97,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             {...props}
           />
         ),
-        code: ({ node, className, children, ...props }) => {
-          console.log('🚀 ~ MarkdownContent ~ node:', node);
+        code: ({ className, children, ...props }) => {
           const match = /language-(\w+)/.exec(className || '');
           /* */
           return match ? (
