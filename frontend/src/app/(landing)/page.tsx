@@ -1,3 +1,4 @@
+'use client';
 import { CtaSection } from '@/components/lp/cta-section';
 import { FeaturesSection } from '@/components/lp/features-section';
 import { Footer } from '@/components/lp/footer';
