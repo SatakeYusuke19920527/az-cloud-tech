@@ -27,7 +27,7 @@ export function ArticleList({ articles }: ArticleListProps) {
               key={index}
               className="p-4 border rounded-lg hover:bg-accent transition-colors"
             >
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Avatar className="h-10 w-10">
                   {article.avatar_small_url ? (
                     <AvatarImage
@@ -40,30 +40,32 @@ export function ArticleList({ articles }: ArticleListProps) {
                     </AvatarFallback>
                   )}
                 </Avatar>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start mb-2">
+                <div className="flex-1 space-y-2 sm:space-y-0">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                     <a
                       href={article.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-medium hover:underline"
+                      className="text-lg font-medium hover:underline line-clamp-2 sm:line-clamp-1"
                     >
                       {article.title}
                     </a>
-                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                    <div className="text-sm text-muted-foreground flex flex-wrap items-center gap-2">
                       <span>{article.user}</span>
-                      <span className="px-2 py-1 rounded bg-muted text-xs">
+                      <span className="px-2 py-1 rounded bg-muted text-xs whitespace-nowrap">
                         {article.platform}
                       </span>
                     </div>
                   </div>
-                  <div className="flex justify-between mt-2 text-sm text-muted-foreground">
-                    <span>
+                  <div className="flex justify-between items-center mt-2 text-sm text-muted-foreground">
+                    <span className="whitespace-nowrap">
                       {new Date(article.published_at).toLocaleDateString(
                         'ja-JP'
                       )}
                     </span>
-                    <span>❤️ {article.likes_count}</span>
+                    <span className="whitespace-nowrap">
+                      ❤️ {article.likes_count}
+                    </span>
                   </div>
                 </div>
               </div>
