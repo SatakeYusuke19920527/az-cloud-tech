@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       'images.unsplash.com',
       'res.cloudinary.com',
       'lh3.googleusercontent.com',
+      'qiita-image-store.s3.ap-northeast-1.amazonaws.com',
+      's3-ap-northeast-1.amazonaws.com',
+      'www.kentsu.website',
     ],
     remotePatterns: [
       {

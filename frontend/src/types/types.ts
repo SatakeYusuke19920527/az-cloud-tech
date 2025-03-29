@@ -5,6 +5,7 @@ export interface Article {
   likes_count: number;
   user: string;
   avatar_small_url?: string;
+  platform: 'zenn' | 'qiita' | 'kentsu';
 }
 
 export interface ChartData {

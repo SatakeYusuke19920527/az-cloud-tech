@@ -1,9 +1,8 @@
 'use client';
 
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Article } from '@/types/types';
-import Image from 'next/image';
 
 interface ArticleListProps {
   articles: Article[];
@@ -31,16 +30,13 @@ export function ArticleList({ articles }: ArticleListProps) {
               <div className="flex gap-4">
                 <Avatar className="h-10 w-10">
                   {article.avatar_small_url ? (
-                    <Image
+                    <AvatarImage
                       src={article.avatar_small_url}
                       alt={article.user}
-                      width={40}
-                      height={40}
-                      className="rounded-full"
                     />
                   ) : (
                     <AvatarFallback>
-                      {article.user[0].toUpperCase()}
+                      {article.user.charAt(0).toUpperCase()}
                     </AvatarFallback>
                   )}
                 </Avatar>
@@ -54,9 +50,12 @@ export function ArticleList({ articles }: ArticleListProps) {
                     >
                       {article.title}
                     </a>
-                    <span className="text-sm text-muted-foreground">
-                      {article.user}
-                    </span>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      <span>{article.user}</span>
+                      <span className="px-2 py-1 rounded bg-muted text-xs">
+                        {article.platform}
+                      </span>
+                    </div>
                   </div>
                   <div className="flex justify-between mt-2 text-sm text-muted-foreground">
                     <span>

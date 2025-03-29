@@ -40,6 +40,8 @@ export default function Dashboard() {
 
   const getChartData = (): ChartData => {
     const data: ChartData = {};
+    // Initialize Kentsu blog data
+    data['kentsu'] = { likes: 0, posts: 0 };
 
     // Initialize data structure for each user
     ZENN_USERS.forEach(({ username }) => {
@@ -48,10 +50,11 @@ export default function Dashboard() {
 
     // Aggregate data
     filteredArticles.forEach((article) => {
-      if (data[article.user]) {
-        data[article.user].likes += article.likes_count;
-        data[article.user].posts += 1;
+      if (!data[article.user]) {
+        data[article.user] = { likes: 0, posts: 0 };
       }
+      data[article.user].likes += article.likes_count;
+      data[article.user].posts += 1;
     });
 
     return data;
