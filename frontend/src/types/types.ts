@@ -21,3 +21,18 @@ export interface UserStats {
 }
 
 export type TimeRange = 'all' | 'month';
+
+export interface PoCCard {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  content?: {
+    overview: string;
+    architecture?: string;
+    implementation: string[];
+    technologies: string[];
+    benefits: string[];
+    considerations: string[];
+  };
+}

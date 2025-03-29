@@ -5,6 +5,7 @@ import {
   Layers,
   LayoutDashboard,
   Settings,
+  ThumbsUpIcon,
 } from 'lucide-react';
 
 export const navItems: NavItem[] = [
@@ -27,6 +28,11 @@ export const navItems: NavItem[] = [
     title: 'News',
     href: '/dashboard/news',
     icon: ImageDown,
+  },
+  {
+    title: 'PoC Showcase',
+    href: '/dashboard/poc-showcase',
+    icon: ThumbsUpIcon,
   },
   {
     title: '設定',
