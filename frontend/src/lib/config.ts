@@ -20,3 +20,5 @@ export const KENTSU_BLOG = {
   url: 'https://www.kentsu.website/ja/posts/',
   color: 'hsl(var(--chart-4))',
 };
+
+export const ALLOW_MONEY = ['sataaaaak@gmail.com'];
