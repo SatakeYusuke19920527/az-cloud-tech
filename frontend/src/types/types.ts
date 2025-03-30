@@ -26,6 +26,7 @@ export interface PoCCard {
   title: string;
   description: string;
   image: string;
+  priceId: string;
   link: string;
   content?: {
     overview: string;

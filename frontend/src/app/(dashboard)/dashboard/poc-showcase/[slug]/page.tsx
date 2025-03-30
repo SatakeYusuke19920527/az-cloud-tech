@@ -1,4 +1,5 @@
 'use client';
+import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { PoCCard } from '@/types/types';
 import { motion } from 'framer-motion';
@@ -15,6 +16,7 @@ export const pocCards: PoCCard[] = [
     image:
       'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&h=800&q=80',
     link: '/dashboard/poc-showcase/azure-ai-search',
+    priceId: 'price_1R89iLEGC7ceON3zFXsGXevl',
     content: {
       overview:
         'Azure AI Searchは、高度な検索機能を提供するマネージドサービスです。フルテキスト検索、ファセット検索、フィルタリング、ソートなどの機能を簡単に実装できます。',
@@ -182,6 +184,23 @@ export default function PoCDetailPage() {
             </Card>
           </div>
         </motion.div>
+        {/* <form action={formAction}>
+          <input name="priceId" value={poc.priceId} type="hidden" />
+          
+        </form> */}
+        <form action="/api/checkout_sessions" method="POST">
+          <section>
+            <Button
+              className="w-full mt-8"
+              variant={'default'}
+              size={'lg'}
+              type="submit"
+              role="link"
+            >
+              {poc.title}を購入する
+            </Button>
+          </section>
+        </form>
       </div>
     </div>
   );

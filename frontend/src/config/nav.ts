@@ -30,7 +30,7 @@ export const navItems: NavItem[] = [
     icon: ImageDown,
   },
   {
-    title: 'PoC Showcase',
+    title: 'PoC Showcase(preview)',
     href: '/dashboard/poc-showcase',
     icon: ThumbsUpIcon,
   },
