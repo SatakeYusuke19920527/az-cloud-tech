@@ -15,6 +15,11 @@ export const navItems: NavItem[] = [
     icon: LayoutDashboard,
   },
   {
+    title: 'News',
+    href: '/dashboard/news',
+    icon: ImageDown,
+  },
+  {
     title: 'ゼニの話',
     href: '/dashboard/money',
     icon: Image,
@@ -23,11 +28,6 @@ export const navItems: NavItem[] = [
     title: 'Load to MVP',
     href: '/dashboard/mvp',
     icon: Layers,
-  },
-  {
-    title: 'News',
-    href: '/dashboard/news',
-    icon: ImageDown,
   },
   {
     title: 'PoC Showcase(preview)',
