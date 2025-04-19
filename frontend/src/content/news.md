@@ -62,3 +62,8 @@
   - ![](https://storage.googleapis.com/zenn-user-upload/8e6a64dc2837-20250419.png)
 - Azure の知識地図が publish🚀 Amazon 予約すると良いらしいです！
   - ![](https://storage.googleapis.com/zenn-user-upload/a9ecf0aab405-20250419.png)
+
+### Global Azure 登壇情報 🚀
+
+- kento さん、satake が Global Azure 2025 に登壇します！🚀
+  - https://tfsug.connpass.com/event/348543/
