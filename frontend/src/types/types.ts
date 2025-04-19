@@ -42,3 +42,14 @@ export interface PoCCard {
     considerations: string[];
   };
 }
+
+export interface NewsItem {
+  id: string;
+  title: string;
+  content: string;
+  imageUrl: string;
+  date: string;
+  author: string;
+  isFeatured: boolean;
+  category: string;
+}

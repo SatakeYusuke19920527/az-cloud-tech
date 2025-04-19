@@ -13,12 +13,18 @@ const nextConfig: NextConfig = {
       'qiita-image-store.s3.ap-northeast-1.amazonaws.com',
       's3-ap-northeast-1.amazonaws.com',
       'www.kentsu.website',
+      'images.pexels.com',
     ],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
         pathname: '/zenn/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: 'dashboard/note/**',
       },
     ],
   },

@@ -5,6 +5,7 @@ import {
   Layers,
   LayoutDashboard,
   Settings,
+  StickyNote,
   ThumbsUpIcon,
 } from 'lucide-react';
 
@@ -28,6 +29,11 @@ export const navItems: NavItem[] = [
     title: 'Load to MVP',
     href: '/dashboard/mvp',
     icon: Layers,
+  },
+  {
+    title: 'Note(preview)',
+    href: '/dashboard/note',
+    icon: StickyNote,
   },
   {
     title: 'PoC Showcase(preview)',
