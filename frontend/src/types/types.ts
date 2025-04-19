@@ -20,7 +20,12 @@ export interface UserStats {
   totalLikes: number;
 }
 
-export type TimeRange = 'all' | 'month';
+export type TimeRange = 'all' | 'month' | 'custom';
+
+export interface DateRange {
+  from: Date | undefined;
+  to: Date | undefined;
+}
 
 export interface PoCCard {
   title: string;

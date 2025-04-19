@@ -30,7 +30,7 @@ export default function DashboardLayout({
               href="/dashboard"
               className="flex items-center space-x-2 cursor-pointer"
             >
-              <h1 className="text-lg font-bold">Proof of Concept Department</h1>
+              {/* <h1 className="text-lg font-bold">Proof of Concept Department</h1> */}
             </Link>
             <div className="ml-auto hidden md:block">
               <AuthButton />
