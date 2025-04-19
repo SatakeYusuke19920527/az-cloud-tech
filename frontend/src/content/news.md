@@ -14,7 +14,7 @@
 
 ### 集計できていない登壇情報
 
-#### Google Cloud Next にてラスベガスで荒ぶる yamada -niki (雲勉もすこし)🚀
+### Google Cloud Next にてラスベガスで荒ぶる yamada -niki (雲勉もすこし)🚀
 
 - 【Google Cloud Next ’25】BigQuery の新時代！SQL で画像も音声も分析！BigQuery Object Ref と Gemini で作るマルチモーダル AI 活用術
 
@@ -47,7 +47,7 @@
 - 第 159 回 雲勉 Amazon Bedrock でブラウザを操作する AI エージェントを作ってみた
   - https://youtu.be/c3vdlpFceVA?feature=shared
 
-#### GitHub Copilot や MVP の記事まで色々な活動を観測 maki -san 🚀
+### GitHub Copilot や MVP の記事まで色々な活動を観測 maki -san 🚀
 
 - GitHub Colilot 入門 ~ 最新機能まで！ どこまで AI 駆動で開発出来るのか
 
@@ -56,7 +56,7 @@
 - TECH PLAY Career Conference 文系出身・プログラミング未経験でエンジニアになった私が、技術を楽しみ成長するサイクルを作り上げて Microsoft MVP を受賞するまで
   - https://techplay.jp/column/1968
 
-#### AI Tour から本出版まで JP さん 🚀
+### AI Tour から本出版まで JP さん 🚀
 
 - 【AI Tour】AI Tour 2025 での登壇 satya より満員だったそうです！🚀
   - ![](https://storage.googleapis.com/zenn-user-upload/8e6a64dc2837-20250419.png)
