@@ -59,10 +59,10 @@ const initialNews: NewsItem[] = [
     content:
       'Recent developments in quantum computing that promise to revolutionize data processing.',
     imageUrl:
-      'https://images.pexels.com/photos/821738/pexels-photo-821738.jpeg',
+      'https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg',
     date: '2025-02-20',
     author: 'Sophia Kim',
-    isFeatured: true,
+    isFeatured: false,
     category: 'Technology',
   },
 ];

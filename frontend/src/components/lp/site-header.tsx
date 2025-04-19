@@ -74,7 +74,7 @@ export function SiteHeader() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#pricing" legacyBehavior passHref>
+                    <Link href="#pricing" passHref>
                       <NavigationMenuLink
                         className={navigationMenuTriggerStyle()}
                       >
@@ -83,7 +83,7 @@ export function SiteHeader() {
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#cases" legacyBehavior passHref>
+                    <Link href="#cases" passHref>
                       <NavigationMenuLink
                         className={navigationMenuTriggerStyle()}
                       >

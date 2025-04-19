@@ -19,7 +19,7 @@ import {
   CardFooter,
   CardHeader,
 } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
+import { cn, defaultImages } from '@/lib/utils';
 import { NewsItem } from '@/types/types';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
@@ -34,6 +34,10 @@ interface NewsCardProps {
 
 export function NewsCard({ news, onDelete, onFeatureToggle }: NewsCardProps) {
   const formattedDate = format(new Date(news.date), 'MMMM d, yyyy');
+  const imageUrl =
+    news.imageUrl ||
+    defaultImages[news.category as keyof typeof defaultImages] ||
+    defaultImages.default;
 
   return (
     <motion.div
@@ -51,7 +55,7 @@ export function NewsCard({ news, onDelete, onFeatureToggle }: NewsCardProps) {
       >
         <div className="relative aspect-[16/9] w-full overflow-hidden">
           <Image
-            src={news.imageUrl}
+            src={imageUrl}
             alt={news.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -105,9 +109,6 @@ export function NewsCard({ news, onDelete, onFeatureToggle }: NewsCardProps) {
         </CardContent>
 
         <CardFooter className="flex justify-between">
-          <Button variant="outline" size="sm">
-            Read More
-          </Button>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button
