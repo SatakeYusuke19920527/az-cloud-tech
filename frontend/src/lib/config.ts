@@ -23,7 +23,14 @@ export const KENTSU_BLOG = {
   color: 'hsl(var(--chart-4))',
 };
 
-export const ALLOW_MONEY = ['sataaaaak@gmail.com'];
+export const ALLOW_MONEY = [
+  'sataaaaak@gmail.com',
+  'ymd65536@gmail.com',
+  'naoki1213mj@gmail.com',
+  'jynpei.t@gmail.com',
+  'otnek427@gmail.com',
+  'nomhiro1204@gmail.com',
+];
 
 export const pocCards: PoCCard[] = [
   {
