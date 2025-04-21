@@ -44,6 +44,10 @@
 
   - https://iret.media/148861
 
+- 【Google Cloud Next ’25】Agent Development Kit と Dev Container を使って簡単なチャットアプリを起動してみよう
+
+  - https://iret.media/150550
+
 - 第 159 回 雲勉 Amazon Bedrock でブラウザを操作する AI エージェントを作ってみた
   - https://youtu.be/c3vdlpFceVA?feature=shared
 
