@@ -1,10 +1,23 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { ALLOW_ID } from './lib/config';
 
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)', '/']);
 
 export default clerkMiddleware(async (auth, request) => {
+  const { userId } = await auth();
+  console.log('🚀 ~ clerkMiddleware ~ userId:', userId);
+
   if (!isPublicRoute(request)) {
     await auth.protect();
+  }
+
+  // 許可 ID に含まれなければアクセス拒否
+  if (userId && !ALLOW_ID.includes(userId!)) {
+    // 任意のページへリダイレクト or 403 応答
+    return new Response(
+      'You are not a member of the PoC team. If you have any questions, please contact Yusuke.',
+      { status: 403 }
+    );
   }
 });
 

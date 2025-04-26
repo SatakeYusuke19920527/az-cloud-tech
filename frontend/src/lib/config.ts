@@ -23,13 +23,29 @@ export const KENTSU_BLOG = {
   color: 'hsl(var(--chart-4))',
 };
 
-export const ALLOW_MONEY = [
+export const ALLOWED = [
   'sataaaaak@gmail.com',
   'ymd65536@gmail.com',
   'naoki1213mj@gmail.com',
   'jynpei.t@gmail.com',
   'otnek427@gmail.com',
   'nomhiro1204@gmail.com',
+];
+
+export const ALLOW_ID = [
+  'user_2wFY019LIkIELsUv82PfJJT9AZA',
+  'user_2w3xQrHZI8hP7K5TWtgMzZfw9ww',
+  'user_2w2aZzdPFtXyzmbity16KU52afa',
+  'user_2w2VGC1Q91qYI8fWnm5jsI5ZYcD',
+  'user_2w2R2ajCR4ZX914ZZUes1jAUBa8',
+  'user_2w2P1x5XoHa1AMILrWq2ap4YoIP',
+  'user_2w2Okc2AwRJD9bdVfC7oHXzIVvI',
+  'user_2vzRurcHpA5EUeXlk3QDUeVhlGB',
+  'user_2vx34xAuEGIN0kHwmiGcS6H45TD',
+  'user_2vwGu1nXfLyssrDBjqQ9Y0TtGOo',
+  'user_2vw7fsjs2dJHIfUd4gQ5iFWTj2w',
+  'user_2v1yj78BtZCI1N9GPMaIikWMwf8',
+  'user_2uYQ2c5SckoVJkAiodNil0Imo2G',
 ];
 
 export const pocCards: PoCCard[] = [
