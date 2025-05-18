@@ -1,7 +1,6 @@
 import { NavItem } from '@/types/nav';
 import {
   Image,
-  ImageDown,
   Layers,
   LayoutDashboard,
   Settings,
@@ -17,8 +16,8 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'News',
-    href: '/dashboard/news',
-    icon: ImageDown,
+    href: '/dashboard/note',
+    icon: StickyNote,
   },
   {
     title: 'ゼニの話',
@@ -29,11 +28,6 @@ export const navItems: NavItem[] = [
     title: 'Load to MVP',
     href: '/dashboard/mvp',
     icon: Layers,
-  },
-  {
-    title: 'Note(preview)',
-    href: '/dashboard/note',
-    icon: StickyNote,
   },
   {
     title: 'PoC Showcase(preview)',

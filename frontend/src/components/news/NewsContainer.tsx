@@ -12,7 +12,8 @@ import { Clock, Newspaper, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function NewsContainer() {
-  const { news, addNews, deleteNews, toggleFeatured, isLoading } = useNews();
+  const { news, addNews, deleteNews, isLoading, toggleFeatured } = useNews();
+
   const [filteredNews, setFilteredNews] = useState<NewsItem[]>([]);
   const [filters, setFilters] = useState({
     search: '',
@@ -68,7 +69,7 @@ export function NewsContainer() {
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center space-y-4">
           <div className="h-8 w-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="text-muted-foreground">Loading news...</p>
+          <p className="text-muted-foreground">Loading PoC部 News...</p>
         </div>
       </div>
     );
@@ -77,7 +78,7 @@ export function NewsContainer() {
   return (
     <div className="space-y-8">
       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
-        <h1 className="text-3xl font-bold tracking-tight">Latest News</h1>
+        <h1 className="text-3xl font-bold tracking-tight">PoC部 News</h1>
         <AddNewsDialog onAddNews={addNews} />
       </div>
 

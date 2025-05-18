@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
       's3-ap-northeast-1.amazonaws.com',
       'www.kentsu.website',
       'images.pexels.com',
+      'picsum.photos',
     ],
     remotePatterns: [
       {

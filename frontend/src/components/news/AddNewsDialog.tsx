@@ -34,7 +34,8 @@ export function AddNewsDialog({ onAddNews }: AddNewsDialogProps) {
   const [formData, setFormData] = useState<Omit<NewsItem, 'id'>>({
     title: '',
     content: '',
-    imageUrl: '',
+    imageUrl:
+      'https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg',
     date: new Date().toISOString().split('T')[0],
     author: '',
     isFeatured: false,
@@ -123,7 +124,7 @@ export function AddNewsDialog({ onAddNews }: AddNewsDialogProps) {
                 className="min-h-[120px]"
               />
             </div>
-            <div className="grid gap-2">
+            {/* <div className="grid gap-2">
               <Label htmlFor="imageUrl">Image URL</Label>
               <Input
                 id="imageUrl"
@@ -133,7 +134,7 @@ export function AddNewsDialog({ onAddNews }: AddNewsDialogProps) {
                 placeholder="https://example.com/image.jpg"
                 required
               />
-            </div>
+            </div> */}
             <div className="grid grid-cols-2 gap-4">
               <div className="grid gap-2">
                 <Label htmlFor="date">Date</Label>

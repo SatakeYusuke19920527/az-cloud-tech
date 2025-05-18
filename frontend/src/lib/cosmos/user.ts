@@ -10,7 +10,9 @@ export const createUser = async (clerkId: string, email: string) => {
         process.env.COSMOS_CONNECTION_STRING!
       );
       const database = cosmosClient.database(process.env.COSMOS_DATABASE_NAME!);
-      const container = database.container(process.env.COSMOS_CONTAINER_NAME!);
+      const container = database.container(
+        process.env.COSMOS_CONTAINER_NAME_USER!
+      );
 
       // 新規のユーザードキュメントを作成
       // idにはCosmos DBのユニークIDが必要となるので、通常はclerkIdやUUID等をそのまま渡すことが多いです
@@ -42,7 +44,9 @@ export const updateUser = async (clerkId: string, newEmail: string) => {
         process.env.COSMOS_CONNECTION_STRING!
       );
       const database = cosmosClient.database(process.env.COSMOS_DATABASE_NAME!);
-      const container = database.container(process.env.COSMOS_CONTAINER_NAME!);
+      const container = database.container(
+        process.env.COSMOS_CONTAINER_NAME_USER!
+      );
 
       // 更新対象のアイテムを取得
       const item = container.item(clerkId, clerkId);
@@ -80,7 +84,9 @@ export const deleteUser = async (clerkId: string) => {
         process.env.COSMOS_CONNECTION_STRING!
       );
       const database = cosmosClient.database(process.env.COSMOS_DATABASE_NAME!);
-      const container = database.container(process.env.COSMOS_CONTAINER_NAME!);
+      const container = database.container(
+        process.env.COSMOS_CONTAINER_NAME_USER!
+      );
 
       // 削除対象のアイテムを取得
       const item = container.item(clerkId, clerkId);
