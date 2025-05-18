@@ -9,4 +9,4 @@
 - murata さん, yuya さんも是非 🚀​
 - 他にも MVP 目指される方は是非お声がけください！
 
-- sakemi -san, maki -san, yamada -niki が MVP 更新審査中 🚀
+- sakemi -san, maki -san, yamada -niki が MVP 更新 🚀
