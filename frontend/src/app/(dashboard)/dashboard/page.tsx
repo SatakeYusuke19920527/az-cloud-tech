@@ -56,6 +56,19 @@ export default function Dashboard() {
       data[username] = { likes: 0, posts: 0 };
     });
 
+    // QIITAユーザーを初期化
+    QIITA_USERS.forEach(({ username }) => {
+      data[username] = { likes: 0, posts: 0 };
+    });
+
+    // Get unique users from articles in case there are any not in the predefined lists
+    const uniqueUsers = Array.from(new Set(filteredArticles.map(article => article.user)));
+    uniqueUsers.forEach(user => {
+      if (!data[user]) {
+        data[user] = { likes: 0, posts: 0 };
+      }
+    });
+
     // 集計
     filteredArticles.forEach((article) => {
       if (!data[article.user]) {

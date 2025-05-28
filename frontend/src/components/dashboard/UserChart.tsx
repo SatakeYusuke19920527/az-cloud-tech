@@ -26,23 +26,35 @@ export function UserChart({ data, type, timeRange }: UserChartProps) {
       ? `いいね数 (${timeRange === 'month' ? '過去1ヶ月' : '全期間'})`
       : `記事数 (${timeRange === 'month' ? '過去1ヶ月' : '全期間'})`;
 
-  const chartData = [
-    ...ZENN_USERS.map(({ username, color }) => ({
-      name: username,
-      value: data[username]?.[type] || 0,
-      color: color,
-    })),
-    ...QIITA_USERS.map(({ username, color }) => ({
-      name: username,
-      value: data[username]?.[type] || 0,
-      color: color,
-    })),
-    {
-      name: 'kentsu',
-      value: data['kentsu']?.[type] || 0,
-      color: KENTSU_BLOG.color,
-    },
+  // Create a mapping of usernames to colors for predefined users
+  const colorMap: Record<string, string> = {
+    ...Object.fromEntries(ZENN_USERS.map(({ username, color }) => [username, color])),
+    ...Object.fromEntries(QIITA_USERS.map(({ username, color }) => [username, color])),
+    'kentsu': KENTSU_BLOG.color,
+  };
+
+  // Get default colors for chart
+  const defaultColors = [
+    'hsl(var(--chart-1))',
+    'hsl(var(--chart-2))',
+    'hsl(var(--chart-3))',
+    'hsl(var(--chart-4))',
+    'hsl(var(--chart-5))',
   ];
+  
+  // Get all users from the data object
+  const allUsers = Object.keys(data);
+  let colorIndex = 0;
+  
+  const chartData = allUsers.map(username => ({
+    name: username,
+    value: data[username]?.[type] || 0,
+    // Use predefined color if available, otherwise use a default color
+    color: colorMap[username] || defaultColors[colorIndex++ % defaultColors.length],
+  }));
+  
+  // Sort chart data by value in descending order
+  chartData.sort((a, b) => b.value - a.value);
 
   return (
     <Card>
