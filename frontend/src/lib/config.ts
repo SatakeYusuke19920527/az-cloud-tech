@@ -48,6 +48,7 @@ export const ALLOW_ID = [
   'user_2v1yj78BtZCI1N9GPMaIikWMwf8',
   'user_2uYQ2c5SckoVJkAiodNil0Imo2G',
   'user_2xFO93dDTdqhuAH3holCNz1xy43',
+  'user_2ywz9eOnZgOjFOlkyVDn7kyBpIA',
 ];
 
 export const pocCards: PoCCard[] = [
