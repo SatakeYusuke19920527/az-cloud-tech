@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       'www.kentsu.website',
       'images.pexels.com',
       'picsum.photos',
+      'source.unsplash.com',
     ],
     remotePatterns: [
       {

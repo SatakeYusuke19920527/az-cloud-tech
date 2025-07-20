@@ -67,6 +67,7 @@
     "rehype-highlight": "^7.0.2",
     "rehype-pretty-code": "^0.14.1",
     "remark-gfm": "^4.0.1",
+    "rss-parser": "^3.13.0",
     "shiki": "^3.2.1",
     "sonner": "^2.0.1",
     "stripe": "^17.7.0",

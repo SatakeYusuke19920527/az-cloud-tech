@@ -30,6 +30,7 @@ export const ALLOWED = [
   'jynpei.t@gmail.com',
   'otnek427@gmail.com',
   'nomhiro1204@gmail.com',
+  'dthstrans@gmail.com ',
 ];
 
 export const ALLOW_ID = [
