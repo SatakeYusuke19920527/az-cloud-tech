@@ -1,12 +1,12 @@
 import { NavItem } from '@/types/nav';
 import {
+  BarChart2,
   Image,
   Layers,
   LayoutDashboard,
   Settings,
   StickyNote,
   ThumbsUpIcon,
-  BarChart2, // 追加
 } from 'lucide-react';
 
 export const navItems: NavItem[] = [
@@ -41,7 +41,7 @@ export const navItems: NavItem[] = [
     icon: Settings,
   },
   {
-    title: 'Analysis',
+    title: 'Analysis(test中..)',
     href: '/dashboard/analysis',
     icon: BarChart2,
   },

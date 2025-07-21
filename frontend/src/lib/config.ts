@@ -10,6 +10,7 @@ export const ZENN_USERS = [
   { username: 'ymd65536', color: 'hsl(var(--chart-2))' },
   { username: '07jp27', color: 'hsl(var(--chart-3))' },
   { username: 'mrt', color: 'hsl(var(--chart-4))' },
+  { username: 'yamaday', color: 'hsl(var(--chart-5))' },
 ];
 
 export const QIITA_USERS = [
