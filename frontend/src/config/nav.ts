@@ -6,6 +6,7 @@ import {
   Settings,
   StickyNote,
   ThumbsUpIcon,
+  BarChart2, // 追加
 } from 'lucide-react';
 
 export const navItems: NavItem[] = [
@@ -20,7 +21,7 @@ export const navItems: NavItem[] = [
     icon: StickyNote,
   },
   {
-    title: 'ゼニの話',
+    title: 'Information',
     href: '/dashboard/money',
     icon: Image,
   },
@@ -38,5 +39,10 @@ export const navItems: NavItem[] = [
     title: '設定',
     href: '/dashboard/settings',
     icon: Settings,
+  },
+  {
+    title: 'Analysis',
+    href: '/dashboard/analysis',
+    icon: BarChart2,
   },
 ];
