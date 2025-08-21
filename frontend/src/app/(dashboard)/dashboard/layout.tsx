@@ -2,35 +2,24 @@
 import AuthButton from '@/components/auth/auth-button';
 import MobileNav from '@/components/dashboard/mobile-nav';
 import DashboardNav from '@/components/dashboard/nav';
-//import { useUser } from '@clerk/nextjs';
-//import { useEffect } from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 export default function DashboardLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  // const { isSignedIn } = useUser();
-  // console.log('🚀 ~ Dashboard ~ isSignedIn:', isSignedIn);
-  // useEffect(() => {
-  //   if (!isSignedIn) {
-  //     window.location.href = '/';
-  //   }
-  // }, [isSignedIn]);
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div>
+    <div className="min-h-screen bg-background">
       {/* header */}
       <header className="sticky top-0 z-40 border-b bg-background">
-        <div className="flex items-center h-16 px-6">
+        <div className="flex h-16 items-center px-6">
           <MobileNav />
-
           <div className="flex w-full">
             <Link
               href="/dashboard"
-              className="flex items-center space-x-2 cursor-pointer"
+              className="flex cursor-pointer items-center space-x-2"
             >
-              {/* <h1 className="text-lg font-bold">Proof of Concept Department</h1> */}
+              {/* title/logo if needed */}
             </Link>
             <div className="ml-auto hidden md:block">
               <AuthButton />
@@ -38,16 +27,19 @@ export default function DashboardLayout({
           </div>
         </div>
       </header>
-      {/* sidebar and main contaits */}
-      <div className="container md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+
+      {/* sidebar + main */}
+      <div className="grid grid-cols-1 md:grid-cols-[240px_1fr]">
         {/* sidebar */}
-        <aside className="fixed md:sticky top-16 z-30 hidden md:block border-r h-[calc(100vh-4.1rem)]">
-          <div className="py-6 px-2 lg:py-8">
+        <aside className="hidden md:block sticky top-16 self-start border-r">
+          {/* ← 外側は幅だけ担当。パディング/高さ/スクロールは内側へ */}
+          <div className="h-[calc(100vh-4rem)] overflow-y-auto px-6 py-6 lg:px-10 lg:py-8">
             <DashboardNav />
           </div>
         </aside>
-        {/* main contents */}
-        <main className="flex w-full flex-col overflow-hidden p-4">
+
+        {/* main */}
+        <main className="min-w-0 w-full min-h-[calc(100vh-4rem)] overflow-x-hidden px-6 py-6 lg:px-10 lg:py-8">
           {children}
         </main>
       </div>

@@ -6,7 +6,6 @@ import {
   LayoutDashboard,
   Settings,
   StickyNote,
-  ThumbsUpIcon,
 } from 'lucide-react';
 
 export const navItems: NavItem[] = [
@@ -14,6 +13,11 @@ export const navItems: NavItem[] = [
     title: '今月のPoC',
     href: '/dashboard',
     icon: LayoutDashboard,
+  },
+  {
+    title: 'PoCs(test中..)',
+    href: '/dashboard/pocs',
+    icon: BarChart2,
   },
   {
     title: 'News',
@@ -30,19 +34,14 @@ export const navItems: NavItem[] = [
     href: '/dashboard/mvp',
     icon: Layers,
   },
-  {
-    title: 'PoC Showcase(preview)',
-    href: '/dashboard/poc-showcase',
-    icon: ThumbsUpIcon,
-  },
+  // {
+  //   title: 'PoC Showcase(preview)',
+  //   href: '/dashboard/poc-showcase',
+  //   icon: ThumbsUpIcon,
+  // },
   {
     title: '設定',
     href: '/dashboard/settings',
     icon: Settings,
-  },
-  {
-    title: 'Analysis(test中..)',
-    href: '/dashboard/analysis',
-    icon: BarChart2,
   },
 ];
